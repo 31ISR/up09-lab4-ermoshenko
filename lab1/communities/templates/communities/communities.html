@@ -1,21 +1,14 @@
-{% extends 'layout.html' %}
-{% block title %}
-    Главная страница
-{% endblock %}
-
-
-<!DOCTYPE html>
-{% load static %}
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style_communities.css' %}">
-    <title>Communities</title>
-</head>
-<body>
-    {% block content %}
-    <h1>Communities</h1>
+{% extends 'layout.html' %} {% block title %} Communities {% endblock %}
+{% block content %}
+    <section>
+        <h1>Communities</h1>
+        {% for community in communities %}
+        <article class="Community">
+            <h2>{{community.title}}</h2>
+            <p>{{community.date}}</p>
+            <p>{{community.body}}</p>
+        </article>
+        {% endfor %}
+    </section>
+    
     {% endblock %}
-</body>
-</html>

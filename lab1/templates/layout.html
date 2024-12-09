@@ -12,8 +12,8 @@
         <nav>
             <a href="/">Главная страница </a>
             <a href="/about">Обо мне </a>
-            <a href="/posts">Посты </a>
-            <a href="/communities">Сообщества </a>
+            <a href="{% url 'posts' %}">Посты</a>
+            <a href="{% url 'community' %}">Сообщества </a>
         </nav>
         <main>{% block content %} {% endblock %}</main>
     </body>
