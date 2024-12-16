@@ -28,6 +28,8 @@ main {
 a {
   text-decoration: none;
   color: #81dbb8;
+  margin-left: 5%;
+  transition: .3s;
 }
 
 a:hover {
@@ -41,6 +43,4 @@ nav {
     justify-content: center;
     position: sticky;
 }
-nav a{
-  margin-right: 40px;
-}
+
