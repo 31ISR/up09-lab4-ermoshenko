@@ -2,15 +2,18 @@
 {% block content %}
     <section>
         <h1>Posts</h1>
-    
+        <br>
         {% for post in posts %}
+        <hr>
         <article class="post">
             <h2>
                 <a href="{%  url 'posts:page' slug=post.slug %}"> {{ post.title }} </a>
             </h2>
             <p>{{ post.date }}</p>
             <p>{{ post.body }}</p>
+            <p>{{ post.author }}</p>
         </article>
+        
         {% endfor %}
     </section>
     {% endblock %}
